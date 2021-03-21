@@ -1,0 +1,37 @@
+1)what is the difference between copy_by_value vs copy_by_reference?
+
+copy_by_value:
+So basically in a primitive data type when  a variable is assigned a value 
+inside the box the value assigned to the varible is stored 
+
+for example:
+var x=17;
+var y='xyz';
+var a=x;
+var b=y;
+
+in above x and y are copied to a and b both x and a , y and b contains same value
+they are not connected to each other.It is so because the values are directly copied into the new variables
+changes takes places in one dose not affect the other.
+
+COPY_BY_REFERENCE:
+
+in case of non-primitive data type the values are not directly copied.
+for example:
+let user={name:'ram'}
+let admin=user;
+admin.name='venky'; //value changed
+console.log(user.name); //venky
+
+see here when the value of admin is changed it automatically changes the value of user as well
+when one changes the value in the allocated memory it is reflected in the other as well.
+
+2)How to copy by value a composite datatype (array+objects).?
+
+For composite data types objects are copied by reference.Actual variable and copied variable both refer to same memory.
+so once change is occured both orginal and copied data were effected .
+
+to aviod this problem there is something called spread operator(...)
+by using this operator the orginal remains same and the copied is changed when a new value is assigned.
+
+
